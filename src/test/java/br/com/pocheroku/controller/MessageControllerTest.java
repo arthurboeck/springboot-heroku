@@ -14,14 +14,16 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(MessageController.class)
-public class HelloWorldApiTest {
+public class MessageControllerTest {
 
-    @Autowired private MockMvc mockMvc;
+    @Autowired
+    private MockMvc mockMvc;
+
     @Test
     public void checkHelloWorld() throws Exception {
         mockMvc
                 .perform(MockMvcRequestBuilders.get("/hello"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0]").value("Hello Dear World"));
+                .andExpect(jsonPath("message").value("Hello Dear World!"));
     }
 }
