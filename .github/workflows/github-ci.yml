@@ -2,12 +2,15 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
 name: CI
-
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+      - master
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
+      - master
 
 jobs:
   build:
@@ -23,7 +26,9 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: chmod +x ./mvnw install -DskipTests
+      run: |
+        chmod +x ./mvnw
+        ./mvnw install -DskipTests
       
   test:
     name: Unit Test
@@ -39,4 +44,6 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Test with Maven
-        run: chmod +x ./mvnw test
+        run: |
+          chmod +x ./mvnw
+          ./mvnw test
