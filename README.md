@@ -8,5 +8,4 @@ Trying to use a spring boot api, published on heroku cloud.
 - [Maven](https://maven.apache.org/guides/index.html)
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Spring Cloud](https://spring.io/projects/spring-cloud)
-- [Google Guava](https://github.com/google/guava)
 - [Lombok](https://projectlombok.org/setup/maven)

@@ -23,7 +23,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: ./mvnw clean install -Dmaven.test.skip=true
+      run: chmod +x ./mvnw clean install -Dmaven.test.skip=true
       
   test:
     name: Unit Test
@@ -39,4 +39,4 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Test with Maven
-        run: ./mvnw test
+        run: chmod +x ./mvnw test
