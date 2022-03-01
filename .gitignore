@@ -44,3 +44,4 @@ buildNumber.properties
 *.rar
 .gradle/
 *.java.orig
+wrapper.iml
