@@ -1,4 +1,27 @@
 spring:
-  jpa:
-    hibernate:
-      ddl-auto: none
+  #  jpa:
+  #    hibernate:
+  #      ddl-auto: none
+  #
+  management:
+    security:
+      enabled: false
+    endpoints:
+      enabled-by-default: true
+      web:
+        exposure:
+          include: '*'
+    endpoint:
+      health:
+        show-details: always
+    health:
+      probes:
+        enabled: true
+      diskspace:
+        enabled: true
+      ping:
+        enabled: true
+      livenessstate:
+        enabled: true
+      readinessstate:
+        enabled: true
