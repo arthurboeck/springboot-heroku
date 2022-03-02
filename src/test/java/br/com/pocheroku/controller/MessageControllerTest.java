@@ -20,9 +20,9 @@ public class MessageControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    public void checkHelloWorld() throws Exception {
+    public void checkSayHelloIsUp() throws Exception {
         mockMvc
-                .perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON))
+                .perform(MockMvcRequestBuilders.get("/api/v1/hello").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("message").value("Hello Dear World!"));
     }
