@@ -63,7 +63,7 @@ _**Obs.:** On both ways you'll need to set the `Procfile` and `system.properties
 #### How to execute unit tests:
 
 ````
-./mvnw clean install -DskipTests
+./mvnw test
 ````
 
 #### How to run spring boot application:
