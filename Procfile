@@ -1,1 +1,1 @@
-web: java -jar target/poc-heroku-1.0.jar
+web: java -Dserver.port=$PORT -jar target/poc-heroku-1.0.jar

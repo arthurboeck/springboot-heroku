@@ -16,7 +16,7 @@ But, you do need have the `Procfile` file on your source root set ([read more](h
 
 On this project, we set `Procfile` as below:
 ```
-web: java -jar target/poc-heroku-1.0.jar
+web: java -Dserver.port=$PORT -jar target/poc-heroku-1.0.jar
 ```
 Also, bu default, heroku works on jdk 1.8, to make it work on another version, you'll need to set the `system.properties` on your source root, passing de desired jdk, as below:
 ```
