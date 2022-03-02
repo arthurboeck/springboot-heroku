@@ -44,4 +44,4 @@ jobs:
       - name: Build with Maven
         run: |
           chmod +x ./mvnw
-          ./mvnw clean install -DskipTests -X
+          ./mvnw clean install -DskipTests
