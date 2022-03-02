@@ -13,7 +13,6 @@ on:
 jobs:
   unit-test:
     name: Unit Test
-    needs: build
     runs-on: ubuntu-latest
 
     steps:
@@ -31,6 +30,7 @@ jobs:
 
   build:
     name: Build
+    needs: unit-test
     runs-on: ubuntu-latest
 
     steps:
