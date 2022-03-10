@@ -14,7 +14,6 @@ jobs:
   unit-test:
     name: Unit Test
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
@@ -50,12 +49,12 @@ jobs:
       with:
         sarif_file: snyk.sarif
         checkout_path: /home/runner/work/springboot-heroku
+        wait-for-processing: true
 
   build:
     name: Build
     needs: snyk
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
