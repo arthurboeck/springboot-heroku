@@ -26,10 +26,27 @@ jobs:
         run: |
           chmod +x ./mvnw
           ./mvnw test
+          
+  build:
+    name: Build
+    needs: unit-test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: maven
+      - name: Build with Maven
+        run: |
+          chmod +x ./mvnw
+          ./mvnw clean install -DskipTests
   
   snyk:
     name: Snyk Code Coverage
-    needs: unit-test
+    needs: build
     permissions:
       security-events: write
     runs-on: ubuntu-latest
@@ -52,23 +69,6 @@ jobs:
       uses: github/codeql-action/upload-sarif@v1
       with:
         sarif_file: snyk.sarif
-        
-  build:
-    name: Build
-    needs: snyk
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 11
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-          distribution: 'temurin'
-          cache: maven
-      - name: Build with Maven
-        run: |
-          chmod +x ./mvnw
-          ./mvnw clean install -DskipTests
 
 #  deploy:
 #    name: Heroku Deploy
