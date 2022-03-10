@@ -30,6 +30,8 @@ jobs:
   snyk:
     name: Snyk Code Coverage
     needs: unit-test
+    permissions:
+      security-events: write
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -49,8 +51,7 @@ jobs:
       with:
         sarif_file: snyk.sarif
         checkout_path: /home/runner/work/springboot-heroku
-        wait-for-processing: true
-
+        
   build:
     name: Build
     needs: snyk
