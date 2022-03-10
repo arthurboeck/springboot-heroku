@@ -52,6 +52,10 @@ below ([read more](https://github.com/AkhileshNS/heroku-deploy):
 
 _**Obs.:** On both ways you'll need to set the `Procfile` and `system.properties` files._ :yum:
 
+### Code Coverage :white_check_mark:
+
+This project uses [Snyk](https://docs.snyk.io/) for check code coverage and quality, integrated to pipelines.
+
 ### Do it Yourself :bomb:
 
 #### How to build:
