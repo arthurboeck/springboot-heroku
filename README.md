@@ -76,6 +76,12 @@ This project uses [Snyk](https://docs.snyk.io/) for check code coverage and qual
 ./mvnw test
 ````
 
+#### How to execute functional tests / integration tests:
+
+````
+./mvnw clean test -Pfunctional-test
+````
+
 #### How to run spring boot application:
 
 ````

@@ -23,9 +23,9 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Test with Maven
-        run: |
-          chmod +x ./mvnw
-          ./mvnw test
+        run: mvn test #|
+#          chmod +x ./mvnw
+#          ./mvnw test
 
   functional-test:
     name: Functional Test
@@ -40,9 +40,9 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Test with Maven
-        run: |
-          chmod +x ./mvnw
-          ./mvnw clean test -Pfunctional-test surefire-report:report site
+        run: mvn clean test -Pfunctional-test surefire-report:report site #|
+#          chmod +x ./mvnw
+#          ./mvnw clean test -Pfunctional-test surefire-report:report site
       - name: Test Report Generate
         if: always()
         uses: actions/upload-artifact@v1
@@ -63,9 +63,9 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build with Maven
-        run: |
-          chmod +x ./mvnw
-          ./mvnw clean install -DskipTests
+        run: mvn clean install -DskipTests #|
+#          chmod +x ./mvnw
+#          ./mvnw clean install -DskipTests
 
   snyk:
     name: Snyk Code Coverage
@@ -75,7 +75,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: chmod +x ./mvnw
+#      - run: chmod +x ./mvnw
       - name: Running Snyk Code Coverage
         # Snyk can be used to break the build when it detects vulnerabilities.
         # In this case we want to upload the issues to GitHub Code Scanning
