@@ -1,6 +1,6 @@
 package br.com.pocheroku.config;
 
-import br.com.pocheroku.PocHerokuApplication;
+import br.com.pocheroku.Application;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.actuate.autoconfigure.endpoint.web.CorsEndpointProperties;
 import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties;
@@ -42,7 +42,7 @@ public class SwaggerConfig {
 
     @Bean
     public Docket api() {
-        final var basePackageApi = PocHerokuApplication.class.getPackageName();
+        final var basePackageApi = Application.class.getPackageName();
 
         return new Docket(DocumentationType.SWAGGER_2)
                 .useDefaultResponseMessages(false)
