@@ -151,6 +151,10 @@
                         <configuration>
                             <rules>
                                 <rule>
+                                    <excludes>
+                                        <exclude>br/com/pocheroku//**/Application.java</exclude>
+                                        <exclude>br/com/pocheroku/**/*DTO.*</exclude>
+                                    </excludes>
                                     <element>PACKAGE</element>
                                     <limits>
                                         <limit>
