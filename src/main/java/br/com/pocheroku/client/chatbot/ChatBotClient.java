@@ -11,24 +11,24 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class ChatBotClient implements IChatBotClient {
 
     private final IChatBotClient iChatBotClient;
-    private final String BID;
-    private final String KEY;
-    private final String UID;
+    private final String bid;
+    private final String key;
+    private final String uid;
 
     public ChatBotClient(
             @Value("${service.ChatBootApi.bid}") String bid,
             @Value("${service.ChatBootApi.key}") String key,
             @Value("${service.ChatBootApi.uid}") String uid,
             IChatBotClient iChatBotClient) {
-        this.BID = bid;
-        this.KEY = key;
-        this.UID = uid;
+        this.bid = bid;
+        this.key = key;
+        this.uid = uid;
         this.iChatBotClient = iChatBotClient;
     }
 
     @Override
     public ChatBotDTO getChatBootMessage(String myMessage) {
-        return iChatBotClient.getChatBootMessage(BID, KEY, UID, myMessage);
+        return iChatBotClient.getChatBootMessage(bid, key, uid, myMessage);
     }
 
     @FeignClient(url = "${service.ChatBootApi.url}", value = "chatBootApi")

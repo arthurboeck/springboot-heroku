@@ -18,7 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @WebMvcTest(MessageController.class)
 @AutoConfigureMockMvc
-public class MessageControllerTest {
+class MessageControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -27,7 +27,7 @@ public class MessageControllerTest {
     IChatBotClient iChatBotClient;
 
     @Test
-    public void checkSayHelloIsUp() throws Exception {
+    void checkSayHelloIsUp() throws Exception {
         mockMvc
                 .perform(MockMvcRequestBuilders.get("/api/v1/hello").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
@@ -35,7 +35,7 @@ public class MessageControllerTest {
     }
 
     @Test
-    public void checkTextToChatBotApi() throws Exception {
+    void checkTextToChatBotApi() throws Exception {
         when(this.iChatBotClient.getChatBootMessage("Hi"))
                 .thenReturn(new ChatBotDTO("Heyy"));
 

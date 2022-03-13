@@ -67,25 +67,25 @@ This project uses [Snyk](https://docs.snyk.io/) for check code coverage and qual
 #### How to build:
 
 ````
-./mvnw clean install -DskipTests
+mvn clean install -DskipTests
 ````
 
 #### How to execute unit tests:
 
 ````
-./mvnw test
+mvn test
 ````
 
 #### How to execute functional tests / integration tests:
 
 ````
-./mvnw clean test -Pfunctional-test
+mvn clean test -Pfunctional-test
 ````
 
 #### How to run spring boot application:
 
 ````
-./mvnw spring-boot:run
+mvn spring-boot:run
 ````
 
 While application running, the below URLs'll be able: :rocket:

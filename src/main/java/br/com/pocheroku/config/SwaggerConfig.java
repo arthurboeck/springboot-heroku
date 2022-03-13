@@ -80,7 +80,7 @@ public class SwaggerConfig {
             ControllerEndpointsSupplier controllerEndpointsSupplier, EndpointMediaTypes endpointMediaTypes,
             CorsEndpointProperties corsProperties, WebEndpointProperties webEndpointProperties, Environment environment) {
 
-        ArrayList allEndpoints = new ArrayList();
+        ArrayList allEndpoints = new ArrayList<>();
         Collection<ExposableWebEndpoint> webEndpoints = webEndpointsSupplier.getEndpoints();
         allEndpoints.addAll(webEndpoints);
         allEndpoints.addAll(servletEndpointsSupplier.getEndpoints());

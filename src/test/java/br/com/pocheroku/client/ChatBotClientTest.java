@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Import;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Import({ChatBotClient.class})
-public class ChatBotClientTest extends UnitBaseTest {
+class ChatBotClientTest extends UnitBaseTest {
 
     @Autowired
     private IChatBotClient iChatBotClient;
@@ -23,6 +23,6 @@ public class ChatBotClientTest extends UnitBaseTest {
 
         ChatBotDTO chatBotReply = iChatBotClient.getChatBootMessage("Hello");
 
-        assertEquals(chatBotReply.getMessage(), "Hello");
+        assertEquals("Hello", chatBotReply.getMessage());
     }
 }
