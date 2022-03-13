@@ -1,0 +1,26 @@
+service:
+  ChatBootApi:
+    url: http://localhost:${wiremock.server.port}
+    key: AAAAAAA
+    bid: BBBBBBB
+    uid: CCCCCCC
+
+spring:
+  #  jpa:
+  #    hibernate:
+  #      ddl-auto: none
+  #
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+  management:
+    security:
+      enabled: false
+    endpoints:
+      enabled-by-default: true
+      web:
+        exposure:
+          include: '*'
+    endpoint:
+      health:
+        show-details: always
