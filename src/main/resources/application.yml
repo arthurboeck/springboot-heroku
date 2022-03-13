@@ -1,3 +1,10 @@
+service:
+  ChatBootApi:
+    url: http://api.brainshop.ai
+    key: m7ZM9EjYVls7QD52
+    bid: 164660
+    uid: 85631
+
 spring:
   #  jpa:
   #    hibernate:
@@ -17,14 +24,3 @@ spring:
     endpoint:
       health:
         show-details: always
-    health:
-      probes:
-        enabled: true
-      diskspace:
-        enabled: true
-      ping:
-        enabled: true
-      livenessstate:
-        enabled: true
-      readinessstate:
-        enabled: true
