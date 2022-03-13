@@ -60,7 +60,7 @@ This project integrates and uses [Brainshop](https://brainshop.ai/) API's, emula
 
 ### Code Coverage :white_check_mark:
 
-This project uses [Snyk](https://docs.snyk.io/) for check code coverage and quality, integrated to pipelines.
+This project uses [Snyk](https://docs.snyk.io/) and [Sonar Cloud](https://sonarcloud.io/) for check code coverage and quality, integrated to pipelines.
 
 ### Do it Yourself :bomb:
 
