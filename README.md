@@ -10,6 +10,8 @@ Trying to use a spring boot api, published on heroku cloud.
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Spring Cloud](https://spring.io/projects/spring-cloud)
 - [Lombok](https://projectlombok.org/setup/maven)
+- [WireMock](https://wiremock.org/docs/spring-boot/)
+- [Mockito](https://site.mockito.org/)
 
 ### Connection to Heroku
 
@@ -34,7 +36,7 @@ java.runtime.version=11
 #### Connection to Heroku - Using GitHub Actions
 
 Just in case, you don't want to auto deploy on heruko, you can set a job using GitHub actions, as
-below ([read more](https://github.com/AkhileshNS/heroku-deploy):
+below ([read more](https://github.com/AkhileshNS/heroku-deploy)):
 
 ````
   deploy:
@@ -51,6 +53,10 @@ below ([read more](https://github.com/AkhileshNS/heroku-deploy):
 ````
 
 _**Obs.:** On both ways you'll need to set the `Procfile` and `system.properties` files._ :yum:
+
+### Brainshop A.I. :boom:
+
+This project integrates and uses [Brainshop](https://brainshop.ai/) API's, emulating a WeChat with an A.I.
 
 ### Code Coverage :white_check_mark:
 
