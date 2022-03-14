@@ -87,6 +87,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: chmod +x ./mvnw
       - name: Running Snyk Code Coverage
         # Snyk can be used to break the build when it detects vulnerabilities.
         # In this case we want to upload the issues to GitHub Code Scanning
@@ -103,7 +104,6 @@ jobs:
         uses: github/codeql-action/upload-sarif@v1
         with:
           sarif_file: snyk.sarif
-          checkout_path: /home/runner/work/springboot-heroku
 
 #  deploy:
 #    name: Heroku Deploy
