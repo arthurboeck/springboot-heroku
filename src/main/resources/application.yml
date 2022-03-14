@@ -1,13 +1,9 @@
 service:
   ChatBootApi:
-#    url: ${CHATBOOT_API_URL}
-#    key: ${CHATBOOT_API_KEY}
-#    bid: ${CHATBOOT_API_BID}
-#    uid: ${CHATBOOT_API_UID}
-    url: http://api.brainshop.ai
-    key: m7ZM9EjYVls7QD52
-    bid: 164660
-    uid: 85631
+    url: ${CHATBOOT_API_URL}
+    key: ${CHATBOOT_API_KEY}
+    bid: ${CHATBOOT_API_BID}
+    uid: ${CHATBOOT_API_UID}
 
 spring:
   #  jpa:
