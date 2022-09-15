@@ -1,15 +1,41 @@
 service:
   ChatBootApi:
-    url: ${CHATBOOT_API_URL}
-    key: ${CHATBOOT_API_KEY}
-    bid: ${CHATBOOT_API_BID}
-    uid: ${CHATBOOT_API_UID}
+#    url: ${CHATBOOT_API_URL}
+#    key: ${CHATBOOT_API_KEY}
+#    bid: ${CHATBOOT_API_BID}
+#    uid: ${CHATBOOT_API_UID}
+    url: http://api.brainshop.ai
+    key: m7ZM9EjYVls7QD52
+    bid: 164660
+    uid: 85631
 
 spring:
   #  jpa:
   #    hibernate:
   #      ddl-auto: none
   #
+  datasource:
+    platform: postgres
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/developer
+    username: developer
+    password: developer
+    initialize: true
+  database:
+    driverClassName: org.postgresql.Driver
+
+  jpa:
+    database: postgresql
+    show-sql: true
+    generate-ddl: true
+    properties:
+      hibernate:
+        ddl-auto: update
+        format_sql: true
+        show-sql: true
+        type: trace
+        dialect: org.hibernate.dialect.PostgreSQL81Dialect
+
   mvc:
     pathmatch:
       matching-strategy: ant-path-matcher
@@ -24,3 +50,8 @@ spring:
     endpoint:
       health:
         show-details: always
+
+#logging:
+#  level:
+#    root: WARN
+#    org.springframework: WARN
