@@ -52,6 +52,22 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.3.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+        <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-boot-starter</artifactId>
             <version>3.0.0</version>
@@ -125,7 +141,8 @@
                 <version>0.8.7</version>
                 <configuration>
                     <excludes>
-                        <exclude>**/*Application.java</exclude>
+                        <exclude>**/Application.java</exclude>
+                        <exclude>**/SwaggerConfig.java</exclude>
                         <exclude>br/com/pocheroku/**/*DTO.*</exclude>
                     </excludes>
                 </configuration>
